@@ -12,7 +12,7 @@ export function animate(element, delay) {
       { scale: 1, duration: 400 },
     ],
     easing: "easeInOutSine",
-    delay: 2600 + delay,
+    delay: 2200 + delay,
   });
 
   // Get child of element.

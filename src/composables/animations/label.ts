@@ -8,11 +8,11 @@ export function animate(element, steps) {
     targets: element,
     keyframes: [
       { translateY: steps, duration: 50 },
-      { opacity: 1, duration: 50 },
-      { translateY: 0, duration: 400 },
+      { opacity: 1, scale: 0.5, duration: 50 },
+      { translateY: 0, scale: 1, duration: 400 },
     ],
     easing: "easeInOutSine",
-    delay: 2200,
+    delay: 1800,
   });
 
   // Get child of element.

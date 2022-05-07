@@ -22,7 +22,7 @@ export default {
     },
   },
   mounted() {
-    const steps = this.above ? 200 : -200;
+    const steps = this.above ? 225 : -225;
     animate(this.$refs.label, steps);
   },
 };

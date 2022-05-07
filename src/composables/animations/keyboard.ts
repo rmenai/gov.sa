@@ -8,7 +8,7 @@ export function animate(element, spacebar) {
     targets: element,
     opacity: 1,
     duration: 1200,
-    delay: 3000,
+    delay: 2400,
   });
 
   tl.add(
@@ -16,8 +16,8 @@ export function animate(element, spacebar) {
       targets: spacebar,
       width: ["10%", "100%"],
       opacity: { value: 1, duration: 800 },
-      duration: 400,
+      duration: 800,
     },
-    "-=1000"
+    "-=1200"
   );
 }
