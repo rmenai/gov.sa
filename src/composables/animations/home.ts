@@ -84,7 +84,7 @@ export function animate(element) {
         duration: 500,
       },
     ],
-    delay: 100,
+    delay: 200,
   });
   tl.add(
     {

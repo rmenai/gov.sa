@@ -16,8 +16,9 @@
     ref="key"
     class="border-thick border-1 h-[18px] w-8/12"
     tabindex="-1"
+    aria-label="spacebar"
     @click="press"
-  ></button>
+  />
 </template>
 
 <script lang="ts">

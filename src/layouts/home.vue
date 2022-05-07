@@ -19,6 +19,8 @@ useHead({
                 ref="thumbprint"
                 src="/images/thumbprint.png"
                 alt="Thumbprint"
+                width="60px"
+                height="70px"
               />
             </div>
           </div>

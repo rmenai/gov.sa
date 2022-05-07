@@ -1,29 +1,38 @@
-import * as THREE from "three";
+import {
+  WebGLRenderer,
+  PerspectiveCamera,
+  Scene,
+  BufferGeometry,
+  LineBasicMaterial,
+  Vector3,
+  Line,
+  LinePieces,
+} from "three";
 
 export function createWebGLTest(container: HTMLElement) {
   const canvas = container.querySelector("canvas");
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
+  const renderer = new WebGLRenderer({ antialias: true, canvas });
   const cameraDistance = 100;
-  const camera = new THREE.PerspectiveCamera(
+  const camera = new PerspectiveCamera(
     50,
     container.clientWidth / container.clientHeight,
     1,
     400
   );
   let cameraAngle = 0;
-  const scene = new THREE.Scene();
-  const splineGeometry = new THREE.BufferGeometry();
+  const scene = new Scene();
+  const splineGeometry = new BufferGeometry();
   const splineGeometryPoints = [];
-  const splineMaterial = new THREE.LineBasicMaterial({
+  const splineMaterial = new LineBasicMaterial({
     color: 0x6fc0ba,
     opacity: 0,
     transparent: true,
   });
 
-  const backdropGeometry = new THREE.BufferGeometry();
+  const backdropGeometry = new BufferGeometry();
   const backdropGeometryPoints = [];
-  const backdropMaterial = new THREE.LineBasicMaterial({
+  const backdropMaterial = new LineBasicMaterial({
     color: 0x1b2f2d,
     opacity: 1,
     transparent: true,
@@ -55,25 +64,21 @@ export function createWebGLTest(container: HTMLElement) {
       calc(i - 250) * Math.sin((2 * Math.PI * (i % 6)) / 6 + i / 500) +
       Math.cos(i) * 5;
     const z = calc(i - 250) * Math.cos((2 * Math.PI * (i % 6)) / 6 + i / 500);
-    splineGeometryPoints.push(new THREE.Vector3(i - 250, y, z));
+    splineGeometryPoints.push(new Vector3(i - 250, y, z));
   }
   splineGeometry.verticesNeedUpdate = true;
   splineGeometry.setFromPoints(splineGeometryPoints);
 
-  const splineLine = new THREE.Line(splineGeometry, splineMaterial);
+  const splineLine = new Line(splineGeometry, splineMaterial);
   scene.add(splineLine);
 
   for (let i = 0; i < 25; i++) {
-    backdropGeometryPoints.push(new THREE.Vector3(-500, 100 - i * 8, -100));
-    backdropGeometryPoints.push(new THREE.Vector3(500, 100 - i * 8, -100));
+    backdropGeometryPoints.push(new Vector3(-500, 100 - i * 8, -100));
+    backdropGeometryPoints.push(new Vector3(500, 100 - i * 8, -100));
   }
 
   backdropGeometry.setFromPoints(backdropGeometryPoints);
-  const backdropLine = new THREE.Line(
-    backdropGeometry,
-    backdropMaterial,
-    THREE.LinePieces
-  );
+  const backdropLine = new Line(backdropGeometry, backdropMaterial, LinePieces);
   scene.add(backdropLine);
 
   renderer.render(scene, camera);
