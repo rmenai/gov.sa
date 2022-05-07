@@ -29,7 +29,7 @@ export default defineConfig({
     "border-thin": "border-1 border-cyan-400/25",
     "text-terminator": "font-terminator text-sm text-cyan-300",
     "text-inconsolata": "font-inconsolata text-sm text-white",
-    "text-header-sm": "text-xs font-light uppercase leading-tight pt-0.5",
+    "text-header-sm": "text-xs font-light uppercase leading-tight",
     "text-header-md": "text-base uppercase font-semibold",
     "flex-header-sm": "flex items-center justify-center gap-1",
     "flex-header-md": "flex items-center justify-center gap-2",

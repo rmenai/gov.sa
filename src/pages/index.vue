@@ -84,9 +84,9 @@ useHead({
         <TextLabel :above="false">
           <template #start> Docking channel </template>
           <template #end>
-            <div class="border-1 border-thick mb-1 h-2 w-12 rounded-md"></div>
-            <div class="border-thin mb-1 mr-8 h-2 w-10 rounded-md"></div>
-            <div class="border-1 border-thick mb-1 h-2 w-14 rounded-md"></div>
+            <div class="border-1 border-thick h-2 w-12 rounded-md"></div>
+            <div class="border-thin mr-8 h-2 w-10 rounded-md"></div>
+            <div class="border-1 border-thick h-2 w-14 rounded-md"></div>
           </template>
         </TextLabel>
       </div>

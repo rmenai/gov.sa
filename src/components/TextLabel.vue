@@ -3,7 +3,7 @@
     ref="label"
     class="border-thin mr-3 border-l-0 border-r-0 px-1 opacity-0"
   >
-    <div class="text-header-sm flex opacity-0">
+    <div class="text-header-sm flex items-center justify-center opacity-0">
       <div class="flex-header-sm ml-0 mr-auto">
         <slot name="start">START</slot>
       </div>
