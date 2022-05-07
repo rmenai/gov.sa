@@ -2,7 +2,7 @@
 import { animate } from "~/composables/animations/home";
 import { animate as animateBreathing } from "~/composables/animations/breathing";
 useHead({
-  titleTemplate: "Nuxt - %s",
+  titleTemplate: "Encom - %s",
   htmlAttrs: { lang: "en" },
 });
 </script>
