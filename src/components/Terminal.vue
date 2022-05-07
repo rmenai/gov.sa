@@ -23,8 +23,8 @@
 </template>
 
 <script lang="ts">
-import { animate } from "~/composables/animations/cursor";
 import terminalData from "assets/data/terminal.json";
+import { animate } from "~/composables/animations/cursor";
 
 export default {
   data() {

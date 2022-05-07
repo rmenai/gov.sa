@@ -18,8 +18,8 @@
 </template>
 
 <script lang="ts">
-import { animate } from "~/composables/animations/keyboard";
 import keyboardData from "assets/data/keyboard.json";
+import { animate } from "~/composables/animations/keyboard";
 export default {
   data() {
     return {
