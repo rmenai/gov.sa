@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Terminator";
+    src: url("assets/css/Terminator-Regular.woff");
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    src: url("assets/css/Inconsolata-Regular.ttf");
+}
+
+
+html {
+    background-color: black;
+    color: white;
+    font-family: "Inconsolata";
+    font-size: 7.5pt;
+    line-height: 11pt;
+}
+
+button:focus {
+    outline: 0;
+}
+
+a {
+    color: rgb(103, 232, 249);
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    --tw-line-opacity: 1;
+    -webkit-text-decoration-color: rgb(103, 232, 249);
+    text-decoration-color: rgb(103, 232, 249);
+}
