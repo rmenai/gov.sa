@@ -19,7 +19,7 @@ export default defineConfig({
     },
     extend: {
       fontFamily: {
-        terminator: ["Terminator"],
+        terminator: ["Terminator", "sans-serif"],
         inconsolata: ["Inconsolata", "sans-serif"],
       },
     },
