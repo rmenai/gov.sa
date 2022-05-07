@@ -4,6 +4,7 @@
       v-for="(key, i) in keyboardKeys"
       :key="key"
       :name="key.name"
+      :key-code="key.key"
       :code="key.code"
       :padding="i == 37 ? 'ml-2' : i == 13 ? 'ml-4' : i == 25 ? 'ml-8' : 'ml-0'"
     />
@@ -34,6 +35,10 @@ export default {
   },
   methods: {
     handleKeyDown: function (event: KeyboardEvent) {
+      if (!event.isTrusted) {
+        return;
+      }
+
       const key = this.keyboardKeys.find((key) => key.key === event.key);
       if (key) {
         const el = document.getElementById(`key-${key.code}`);
