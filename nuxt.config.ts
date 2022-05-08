@@ -13,5 +13,6 @@ export default defineNuxtConfig({
   },
 
   css: ["assets/css/base.scss"],
+  // @ts-ignore
   colorMode: { classSuffix: "" },
 });

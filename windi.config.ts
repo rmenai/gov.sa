@@ -25,7 +25,7 @@ export default defineConfig({
     },
   },
   shortcuts: {
-    "border-thick": "rounded-md border-2 border-cyan-300",
+    "border-thick": "rounded-lg border-2 border-cyan-300",
     "border-thin": "border-1 border-cyan-400/25",
     "text-terminator": "font-terminator text-sm text-cyan-300",
     "text-inconsolata": "font-inconsolata text-sm text-white",
