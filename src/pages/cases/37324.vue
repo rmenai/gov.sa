@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+useHead({
+  title: "Case 37324",
+});
 </script>
 
 <template>
