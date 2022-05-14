@@ -11,14 +11,15 @@
     "test:e2e": "start-server-and-test preview http://127.0.0.1:3000/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test preview http://127.0.0.1:3000/ 'cypress run'",
     "typecheck": "nuxi typecheck",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.html,.css,.scss --max-warnings 0 --ignore-path .gitignore",
-    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.html,.css,.scss --fix --ignore-path .gitignore",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.html --max-warnings 0 --ignore-path .gitignore",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.html --fix --ignore-path .gitignore",
     "prepare": "husky install"
   },
   "devDependencies": {
     "@cypress/vue": "^3.1.1",
     "@headlessui/vue": "^1.6.0",
     "@iconify/vue": "^3.2.1",
+    "@intlify/nuxt3": "^0.2.0",
     "@nuxt/test-utils-edge": "^3.0.0-rc.2-27525415.a8d42d5",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
@@ -37,7 +38,11 @@
     "husky": "^7.0.4",
     "jsdom": "^19.0.0",
     "lint-staged": "^12.4.1",
-    "nuxt": "3.0.0-rc.2",
+    "nuxi": "3.0.0-rc.1",
+    "nuxt": "3.0.0-rc.1",
+    "@nuxt/kit": "3.0.0-rc.1",
+    "@nuxt/schema": "3.0.0-rc.1",
+    "@nuxt/vite-builder": "3.0.0-rc.1",
     "nuxt-windicss": "^2.3.1",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.10",
@@ -49,10 +54,12 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.1.8",
-    "pinia": "^2.0.13"
+    "animejs": "^3.2.1",
+    "pinia": "^2.0.13",
+    "three": "^0.140.0"
   },
   "lint-staged": {
-    "**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,html,css,scss}": [
+    "**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,html}": [
       "npm run lint"
     ]
   }

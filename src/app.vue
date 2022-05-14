@@ -1,12 +1,12 @@
 <script setup lang="ts">
 useHead({
-  titleTemplate: "Nuxt - %s",
+  titleTemplate: "Encom - %s",
   htmlAttrs: { lang: "en" },
 });
 </script>
 
 <template>
   <div>
-    <slot />
+    <NuxtPage />
   </div>
 </template>
