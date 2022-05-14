@@ -3,7 +3,7 @@
     v-if="!spacebar"
     :id="`key-${code}`"
     ref="key"
-    class="text-header-md group flex h-[30px] w-[34px] items-center justify-center rounded-lg font-normal text-cyan-300"
+    class="group flex h-[30px] w-[34px] items-center justify-center rounded-lg text-lg uppercase text-cyan-300"
     :class="padding"
     tabindex="-1"
     @click="press"

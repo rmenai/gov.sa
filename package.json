@@ -19,6 +19,7 @@
     "@cypress/vue": "^3.1.1",
     "@headlessui/vue": "^1.6.0",
     "@iconify/vue": "^3.2.1",
+    "@intlify/nuxt3": "^0.2.0",
     "@nuxt/test-utils-edge": "^3.0.0-rc.2-27525415.a8d42d5",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
@@ -37,7 +38,11 @@
     "husky": "^7.0.4",
     "jsdom": "^19.0.0",
     "lint-staged": "^12.4.1",
-    "nuxt": "3.0.0-rc.2",
+    "nuxi": "3.0.0-rc.1",
+    "nuxt": "3.0.0-rc.1",
+    "@nuxt/kit": "3.0.0-rc.1",
+    "@nuxt/schema": "3.0.0-rc.1",
+    "@nuxt/vite-builder": "3.0.0-rc.1",
     "nuxt-windicss": "^2.3.1",
     "prettier": "^2.6.2",
     "prettier-plugin-tailwindcss": "^0.1.10",
@@ -51,7 +56,6 @@
     "@pinia/nuxt": "^0.1.8",
     "animejs": "^3.2.1",
     "pinia": "^2.0.13",
-    "screenfull": "^6.0.1",
     "three": "^0.140.0"
   },
   "lint-staged": {

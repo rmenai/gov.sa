@@ -23,6 +23,8 @@
 
 <script lang="ts">
 import { animate } from "~/composables/animations/box";
+import { ended } from "~/composables/animations/home";
+
 export default {
   props: {
     animationDelay: {
@@ -31,7 +33,15 @@ export default {
     },
   },
   mounted() {
-    animate(this.$refs.box, this.animationDelay);
+    if (this.$route.path !== "/" || !ended) {
+      animate(this.$refs.box, this.animationDelay);
+    } else {
+      this.$refs.box.style.opacity = 1;
+
+      // Get box child.
+      const child = this.$refs.box.firstChild;
+      child.style.opacity = 1;
+    }
   },
 };
 </script>

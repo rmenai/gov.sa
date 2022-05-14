@@ -7,7 +7,7 @@ export function animate(element, delay) {
   tl.add({
     targets: element,
     keyframes: [
-      { scale: 0.1, duration: 50 },
+      { scale: 0.25, duration: 50 },
       { opacity: 1, duration: 50 },
       { scale: 1, duration: 400 },
     ],
@@ -21,6 +21,6 @@ export function animate(element, delay) {
   tl.add({
     targets: child,
     opacity: 1,
-    duration: 100,
+    duration: 250,
   });
 }

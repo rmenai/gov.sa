@@ -14,6 +14,7 @@
 
 <script lang="ts">
 import { animate } from "~/composables/animations/label";
+import { ended } from "~/composables/animations/home";
 export default {
   props: {
     above: {
@@ -23,7 +24,15 @@ export default {
   },
   mounted() {
     const steps = this.above ? 225 : -225;
-    animate(this.$refs.label, steps);
+    if (this.$route.path !== "/" || !ended) {
+      animate(this.$refs.label, steps);
+    } else {
+      this.$refs.label.style.opacity = 1;
+
+      // Get box child.
+      const child = this.$refs.label.firstChild;
+      child.style.opacity = 1;
+    }
   },
 };
 </script>

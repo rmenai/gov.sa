@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { animate as animateProgress } from "~/composables/animations/progress";
+
+const datalink = ref({ progress: 0 });
+
+onMounted(() => {
+  animateProgress(datalink.value);
+});
+
 useHead({
   title: "Welcome",
 });
@@ -7,8 +14,8 @@ useHead({
 
 <template>
   <NuxtLayout name="home">
-    <div class="flex gap-x-16">
-      <div class="flex w-[375px] flex-col gap-4">
+    <div class="gap-x-22 flex">
+      <div class="flex w-[375px] flex-col gap-8">
         <TextLabel>
           <template #start>
             Encom touch app
@@ -24,40 +31,19 @@ useHead({
           <template #body>
             <div class="py-1 px-2 pb-12">
               <p>
-                Hello <span class="font-bold text-yellow-300">User</span>. This
-                is a reproduction of the graphics in the boardroom scene in
-                Tron: Legacy. If you have not seen that movie, check out
-                <a href="http://work.gmunk.com/TRON-Board-Room"
-                  >this background material on the making of that scene</a
-                >
-                before proceeding.
+                Bonjour
+                <span class="font-bold text-yellow-300">Utilisateur</span>.
+                Bienvenue sur le site officiel d'<span
+                  class="font-bold text-cyan-300"
+                  >Encom Detective Agency</span
+                >.
               </p>
               <br />
               <p>
-                To make this a bit more fun, the boardroom is configured to
-                visualize live updates from
-                <span class="font-bold text-yellow-300">Github</span> and
-                <span class="font-bold text-yellow-300">Wikipedia</span>, with
-                more streams to come. Click on a stream in the window to the
-                right to continue.
+                Ici vous trouverez toute sorte d'information liée aux enquêtes
+                poursuivies par notre équipe,
               </p>
-              <br />
-              <p>
-                The boardroom visualization requires the use of
-                <a href="http://get.webgl.org/">WebGL</a> and
-                <a href="https://www.w3.org/TR/eventsource/">Event Source</a>.
-                The test below indicates the availability of these features on
-                your system.
-              </p>
-              <br />
-              <p>
-                This was created by
-                <a href="https://twitter.com/arscan">@arscan</a> as a learning
-                exercise. It is not affiliated with Disney, Tron: Legacy, Encom,
-                Wikipedia or
-                <a href="https://github.com/arscan">Github</a>
-                in any way. The source is available on Github.
-              </p>
+              <div class="h-68"></div>
             </div>
           </template>
         </TextBox>
@@ -67,7 +53,7 @@ useHead({
           </template>
           <template #end>
             datalink:
-            <span v-if="datalink.progress == 100" class="text-red-600">
+            <span v-if="datalink.progress === 100" class="text-red-600">
               error
             </span>
             <span v-else>{{ `${datalink.progress}%` }}</span>
@@ -91,7 +77,7 @@ useHead({
         </TextLabel>
       </div>
 
-      <div class="flex w-[450px] flex-col gap-4">
+      <div class="flex w-[475px] flex-col gap-8">
         <TextLabel>
           <template #start>
             Central system data ...
@@ -101,8 +87,8 @@ useHead({
         </TextLabel>
         <TextBox :animation-delay="150">
           <template #start>
-            Boardroom visualization ... Please select data
-            <span class="text-cyan-300">.stream</span>
+            Terminal ... Please select a folder
+            <span class="text-cyan-300">.ssh</span>
           </template>
           <template #body>
             <Terminal />
@@ -120,16 +106,3 @@ useHead({
     </div>
   </NuxtLayout>
 </template>
-
-<script lang="ts">
-export default {
-  data() {
-    return {
-      datalink: { progress: 0 },
-    };
-  },
-  mounted() {
-    animateProgress(this.datalink);
-  },
-};
-</script>
