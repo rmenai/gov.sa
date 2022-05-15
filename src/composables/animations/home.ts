@@ -1,8 +1,5 @@
 import anime from "animejs";
 
-// eslint-disable-next-line import/no-mutable-exports
-let ended = false;
-
 function animate(element) {
   // Make element visible.
   element.style.visibility = "visible";
@@ -127,10 +124,9 @@ function animate(element) {
         animationFrameOutsideBottom.remove();
         animationFrameInsideTop.remove();
         animationFrameInsideBottom.remove();
-        ended = true;
       },
     },
     "-=800"
   );
 }
-export { animate, ended };
+export { animate };

@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+const ended = useEnded();
+onMounted(() => {
+  ended.value = true;
+});
 useHead({
   title: "Unknown",
 });

@@ -33,17 +33,42 @@ useHead({
               <p>
                 Bonjour
                 <span class="font-bold text-yellow-300">Utilisateur</span>.
-                Bienvenue sur le site officiel d'<span
-                  class="font-bold text-cyan-300"
+                Bienvenue sur le site officiel de
+                <span class="font-bold text-cyan-300"
                   >Encom Detective Agency</span
                 >.
               </p>
               <br />
               <p>
                 Ici vous trouverez toute sorte d'information liée aux enquêtes
-                poursuivies par notre équipe,
+                poursuivies par notre équipe, tel que la fameuse enquête de
+                <a href="https://fr.wikipedia.org/wiki/Tueur_du_Zodiaque"
+                  >Tueur du Zodiaque</a
+                >.
               </p>
-              <div class="h-68"></div>
+              <br />
+              <p>
+                Grâce a notre
+                <span class="font-bold text-cyan-300"
+                  >Connexion Shell Sécurisée</span
+                >, vous pouvez accéder à de nombreuses informations réparties
+                sur 5 dossiers différents:
+              </p>
+              <br />
+              <ul>
+                <li>- Affaire Résolue</li>
+                <li>- Affaire 37324</li>
+                <li>- Affaire 37325</li>
+                <li>- <span class="line-through">?@HPEA&RNB</span></li>
+                <li>- Inconnu</li>
+              </ul>
+              <br />
+              <div>
+                <p>Merci pour votre visite et bonne chance,</p>
+                <p>
+                  <span class="font-bold text-yellow-300">Encom</span>
+                </p>
+              </div>
             </div>
           </template>
         </TextBox>

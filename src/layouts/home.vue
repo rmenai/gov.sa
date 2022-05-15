@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { animate, ended } from "~/composables/animations/home";
+import { animate } from "~/composables/animations/home";
 import { animate as animateBreathing } from "~/composables/animations/breathing";
 
 const home = ref(null);
 const thumbprint = ref(null);
+const ended = useEnded();
 
 onMounted(() => {
   const route = useRoute();
-  if (route.path !== "/" || !ended) {
+  if (route.path !== "/" || !ended.value) {
     animate(home.value);
     animateBreathing(thumbprint.value);
+    ended.value = true;
   } else {
     home.value.style.visibility = "visible";
   }

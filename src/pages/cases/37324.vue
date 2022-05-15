@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+const ended = useEnded();
+onMounted(() => {
+  ended.value = true;
+});
 useHead({
   title: "Case 37324",
 });
@@ -13,7 +17,7 @@ useHead({
       </NuxtLink>
       <TextBox :animation-delay="-1000">
         <template #start>
-          <p class="ml-2 py-2 text-2xl">Addaire 37324</p>
+          <p class="ml-2 py-2 text-2xl">Affaire 37324</p>
           <p class="ml-2 py-2 text-2xl text-cyan-300">| Albert Einstein</p>
         </template>
         <template #end>
@@ -23,8 +27,8 @@ useHead({
           <div class="text-header-md flex w-full flex-col p-16 capitalize">
             <header class="flex flex-col items-center px-32 text-center">
               <p class="text-6xl leading-snug text-cyan-200">
-                L'un des plus grands Physiciens vient de mourir. Qu'a-t-il
-                laissé derrière lui ?
+                Un des produits les plus chers vient de disparaître. Que
+                s'est-il vraiment passé ?
               </p>
               <div class="normal-case text-white/95">
                 par <span class="text-white">Detective Ziad</span>,
@@ -39,8 +43,24 @@ useHead({
             <div class="flex">
               <div class="text-2xl normal-case text-cyan-200">
                 <div>
-                  <p class="pb-4 text-5xl font-black">Que ç'est-il passer ?</p>
-                  <p class="font-light text-white"></p>
+                  <p class="pb-4 text-5xl font-black">Que s'est-il passé ?</p>
+                  <p class="font-light text-white">
+                    Un des produits les plus chers du monde vient de disparaître
+                    des mains de
+                    <span class="font-bold text-cyan-300">Albert Einstein</span
+                    >, <br />
+                    le plus grand scientifique du monde encore vivant. Plus
+                    tard, ce produit a été retrouvé dans le
+                    <span class="font-bold text-yellow-300">Dark Web</span>,
+                    acheté par une personne, ou une organisation inconnue.
+                  </p>
+                </div>
+                <br class="my-4" />
+                <div>
+                  <p class="pb-4 text-5xl font-black">Description</p>
+                  <p class="font-light text-white">
+                    Ce mysterieux produit a une forme bien particulière.
+                  </p>
                 </div>
               </div>
               <div class="mr-0 ml-auto">
@@ -49,7 +69,7 @@ useHead({
                   photo="/images/albert.png"
                   date="Mars 13, 2005"
                   birthdate="Jan 12, 1972"
-                  deathdate="Février 25, 2016"
+                  deathdate="Encore vivant"
                   :age="44"
                   gender="Homme"
                   job="Physicien théoricien"

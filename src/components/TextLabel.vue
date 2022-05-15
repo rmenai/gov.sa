@@ -14,7 +14,6 @@
 
 <script lang="ts">
 import { animate } from "~/composables/animations/label";
-import { ended } from "~/composables/animations/home";
 export default {
   props: {
     above: {
@@ -24,7 +23,8 @@ export default {
   },
   mounted() {
     const steps = this.above ? 225 : -225;
-    if (this.$route.path !== "/" || !ended) {
+    const ended = useEnded();
+    if (this.$route.path !== "/" || !ended.value) {
       animate(this.$refs.label, steps);
     } else {
       this.$refs.label.style.opacity = 1;

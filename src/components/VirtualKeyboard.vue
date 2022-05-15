@@ -22,7 +22,6 @@
 <script lang="ts">
 import keyboardData from "~/composables/data/keyboard";
 import { animate } from "~/composables/animations/keyboard";
-import { ended } from "~/composables/animations/home";
 
 export default {
   data() {
@@ -32,7 +31,8 @@ export default {
   },
   mounted: function () {
     window.addEventListener("keydown", this.handleKeyDown);
-    if (this.$route.path !== "/" || !ended) {
+    const ended = useEnded();
+    if (this.$route.path !== "/" || !ended.value) {
       animate(this.$refs.keyboard, this.$refs.spacebar);
     } else {
       this.$refs.keyboard.style.opacity = 1;

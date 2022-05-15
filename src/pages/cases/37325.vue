@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+const ended = useEnded();
+onMounted(() => {
+  ended.value = true;
+});
 useHead({
   title: "Case 37325",
 });
@@ -39,9 +43,14 @@ useHead({
             <div class="flex">
               <div class="text-2xl normal-case text-cyan-200">
                 <div>
-                  <p class="pb-4 text-5xl font-black">Que ç'est-il passer ?</p>
+                  <p class="pb-4 text-5xl font-black">Que s'est-il passé ?</p>
                   <p class="font-light text-white">
-                    M. Masmoudi a été retrouvé mort dans son bureau à 14h43.
+                    M. Masmoudi a été retrouvé mort dans son bureau à
+                    <span class="font-bold text-cyan-300">14h43</span>, après
+                    avoir interviewé 4 personnes. Cependant, M. Nuka, premier
+                    suspect et permière personne interviewée de la journée, n'a
+                    pas pu commettre le crime vu qu'il était a l'aéroport à
+                    l'heure du crime.
                   </p>
                 </div>
                 <br class="my-4" />
@@ -49,10 +58,20 @@ useHead({
                   <p class="pb-4 text-4xl font-black">Suspects potentiels</p>
                   <div id="suspects" class="font-light text-white">
                     <ul>
+                      <li>
+                        <details>
+                          <summary>Aness Rezzoug</summary>
+                          <br />
+                          <img
+                            src="/images/aness.png"
+                            alt="Aness criminal"
+                            width="345"
+                          />
+                          <br />
+                        </details>
+                      </li>
                       <li>- Abed Teboul</li>
-                      <li>- Aness Rezzoug</li>
-                      <li>- Youceff Harmanani</li>
-                      <li>- Ziad Rafei</li>
+                      <li>- Youssef Harmanani</li>
                       <li>- Rami Menai</li>
                     </ul>
                   </div>
@@ -61,7 +80,7 @@ useHead({
                 <div>
                   <p class="pb-4 text-4xl font-black">Media et Autre</p>
                   <br />
-                  <div class="border-thick overflow-hidden border-4">
+                  <div class="border-thick w-[700px] overflow-hidden border-4">
                     <iframe
                       width="700"
                       height="395"
@@ -76,8 +95,8 @@ useHead({
                 <IdentityCard
                   name="Ismail Masmoudi"
                   photo="/images/ismail.png"
-                  date="Avril 1, 2016"
-                  birthdate="Janvier, 2001"
+                  date="Mars 20, 2008"
+                  birthdate="Janvier, 1976"
                   deathdate="Avril 1, 2016"
                   :age="15"
                   gender="Homme"
