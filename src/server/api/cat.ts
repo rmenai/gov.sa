@@ -33,15 +33,14 @@ const users = {};
 
 export default defineEventHandler(async (event) => {
   const host = event.req.headers.host;
+  let url = "https://cataas.com/cat";
 
   if (!users[host]) {
     users[host] = { connected: true, order: 0 };
   } else {
     ++users[host].order;
+    url += `/says/${hints[users[host].order % hints.length]}`;
   }
 
-  const url = `https://cataas.com/cat/says/${
-    hints[users[host].order % hints.length]
-  }`;
   return await fetch(url).then((res) => res.body);
 });
