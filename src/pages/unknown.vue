@@ -28,7 +28,7 @@ useHead({
             <FileBox resource="/api/cat" title="Milo et ses amis" />
             <FileBox
               icon="mdi:file-music-outline"
-              resource="/audio/interview.m4a"
+              resource="/audio/interview.mov"
               title="Entretien perdu"
             />
             <FileBox
