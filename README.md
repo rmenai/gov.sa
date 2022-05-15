@@ -12,7 +12,7 @@
     <a href="https://github.com/rmenai/gov.sa"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://rmenai.github.io/gov.sa/">View Demo</a>
+    <a href="https://encom.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/rmenai/gov.sa/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
     ·
