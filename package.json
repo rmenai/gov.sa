@@ -19,7 +19,6 @@
     "@cypress/vue": "^3.1.1",
     "@headlessui/vue": "^1.6.0",
     "@iconify/vue": "^3.2.1",
-    "@intlify/nuxt3": "^0.2.0",
     "@nuxt/test-utils-edge": "^3.0.0-rc.2-27525415.a8d42d5",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
