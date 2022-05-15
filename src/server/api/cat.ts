@@ -1,4 +1,5 @@
 const hints = [
+  "",
   "Est-ce que",
   "Vous voulez",
   "Un indice",

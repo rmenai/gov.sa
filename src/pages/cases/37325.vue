@@ -35,7 +35,7 @@ useHead({
                 <a href="#">suspects.vercel.app</a>
                 <br />
                 <Icon icon="mdi:clock" class="-mb-[2px]" />
-                Avril 1, 2016, 2:43 PM
+                Février 7, 2018, 2:43 PM
               </div>
             </header>
             <!--            <img src="/images/map.png" alt="World map in white color" />-->
@@ -96,8 +96,8 @@ useHead({
                   name="Ismail Masmoudi"
                   photo="/images/ismail.png"
                   date="Mars 20, 2008"
-                  birthdate="Janvier, 1976"
-                  deathdate="Avril 1, 2016"
+                  birthdate="Janvier, 1978"
+                  deathdate="Février 7, 2018"
                   :age="15"
                   gender="Homme"
                   job="Employeur"

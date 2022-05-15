@@ -35,7 +35,7 @@ useHead({
                 <a href="#">suspects.vercel.app</a>
                 <br />
                 <Icon icon="mdi:clock" class="-mb-[2px]" />
-                Février 25, 2016, 2:00 PM
+                Janvier 2, 2018, 2:00 PM
               </div>
             </header>
             <!--            <img src="/images/map.png" alt="World map in white color" />-->
@@ -57,9 +57,18 @@ useHead({
                 </div>
                 <br class="my-4" />
                 <div>
-                  <p class="pb-4 text-5xl font-black">Description</p>
+                  <p class="pb-4 text-5xl font-black">Phosphorium</p>
                   <p class="font-light text-white">
-                    Ce mysterieux produit a une forme bien particulière.
+                    Ce mysterieux produit, appellé
+                    <span class="font-bold text-cyan-300">Phosphorium</span>,
+                    est un des produits les plus chers et rares du monde. Il a
+                    une valeur estimée de
+                    <span class="font-bold text-yellow-300"
+                      >37000 dollars / g</span
+                    >, non seulement pour sa rareté mais aussi pour son
+                    utilisation dans les réacteurs nucléaires. Il est souvent
+                    trouvé sous forme de graines crystalliques, aussi
+                    transparentes que l'eau.
                   </p>
                 </div>
               </div>
@@ -68,7 +77,7 @@ useHead({
                   name="Albert Einstein"
                   photo="/images/albert.png"
                   date="Mars 13, 2005"
-                  birthdate="Jan 12, 1972"
+                  birthdate="Janvier 1, 1972"
                   deathdate="Encore vivant"
                   :age="44"
                   gender="Homme"
