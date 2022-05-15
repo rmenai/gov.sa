@@ -1,13 +1,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/rmenai/gov.sa">
-    <img src="https://nuxtjs.org/design-kit/colored-logo.png" alt="Logo" width="100">
+    <img src="./src/public/images/thumbprint.png" alt="Logo" width="100">
   </a>
 
-<h3 align="center">Gov.Sa</h3>
+<h3 align="center">Encom Detective Agency</h3>
 
   <p align="center">
-    Awesome gov.sa created by rmenai
+    A detective website for the Encom Agency.
     <br />
     <a href="https://github.com/rmenai/gov.sa"><strong>Explore the docs »</strong></a>
     <br />
@@ -50,7 +50,7 @@
 
 ## About The Project
 
-Awesome gov.sa created by rmenai.
+This is a detective website for the Encom Agency, made for a school projct.
 
 <!-- INSTALLATION -->
 
